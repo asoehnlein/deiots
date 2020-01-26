@@ -8,7 +8,7 @@ menu "MQTT Broker Configuration"
 
     config MQTT_BROKER_TOPIC
         string "mqtt default topic"
-        default "/sensor/bmp280"
+        default "/sensor/hall"
         help
             Specify the Topic to publish sensor values
 
