@@ -100,6 +100,7 @@ static void mqtt_app_start(void *pvParameter)
     esp_mqtt_client_register_event(client, ESP_EVENT_ANY_ID, mqtt_event_handler, client);
     esp_mqtt_client_start(client);
 //    start_bmp280(client); // SCL -> D22 ; SDA -> D21 ; 3.3V ; GND
+//    start_us(client); // TRIG -> D22 ; ECHO -> D21; 5V ; GND
     read_hall(client);
 
     rtos_wait_forever();

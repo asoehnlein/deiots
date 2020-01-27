@@ -10,14 +10,9 @@
 #include <mqtt_main.h>
 #include <advanced_https_ota.h>
 
-#if defined(CONFIG_IDF_TARGET_ESP8266)
-#define SDA_GPIO 4
-#define SCL_GPIO 5
-#else
 #define SDA_GPIO CONFIG_SDA_GPIO
 #define SCL_GPIO CONFIG_SCL_GPIO
 #define I2C_ADDRESS CONFIG_I2C_ADDRESS
-#endif
 
 void bmp280_main(void *pvParameter);
 

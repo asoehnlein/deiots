@@ -66,7 +66,7 @@ void start_bmp280(esp_mqtt_client_handle_t client)
     /*
      * Sensor Task
      */
-    xReturned = xTaskCreatePinnedToCore(bmp280_main, "bmp280_main", MYAPP_RTOS_TASK_STACK_SIZE_LARGE, client, RTOS_TASK_PRIORITY_NORMAL, NULL, APP_CPU_NUM);
+    xReturned = xTaskCreatePinnedToCore(bmp280_main, "bmp280_main", MYAPP_RTOS_TASK_STACK_SIZE_LARGE, client, RTOS_TASK_PRIORITY_NORMAL, NULL, 1);
     if (xReturned == pdPASS) {
         printf("OK Task bmp280_main has been created, and is running right now\n");
     }
