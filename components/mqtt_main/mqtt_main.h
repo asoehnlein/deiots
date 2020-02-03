@@ -23,7 +23,7 @@
 
 //#include <bmp280_main.h>
 //#include <hcsr04_main.h>
-#include <hallsensor_main.h>
+//#include <hallsensor_main.h>
 #include <rtos_define.h>
 
 
